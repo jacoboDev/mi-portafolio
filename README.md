@@ -25,5 +25,5 @@ Este proyecto demuestra mi capacidad para:
 
 ## 📬 Contacto
 ¿Interesado en pipelines de datos o modelos de ML?
-- **LinkedIn:** [Jacobo Pereira](https://linkedin.com/in/jacobo-pereira-)
+- **LinkedIn:** <a href="https://linkedin.com/in/jacobo-pereira-" target="_blank">Jacobo Pereira</a>
 - **Email:** [jacobo.develop@gmail.com](mailto:jacobo.develop@gmail.com)
