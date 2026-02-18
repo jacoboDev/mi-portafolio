@@ -9,5 +9,28 @@
     <a href="../index.html#proyectos" class="text-blue-400">← Volver al inicio</a>
     <h1 class="text-4xl font-bold mt-10">Sistema de Gestión</h1>
     <p class="mt-5 text-slate-400">Aquí explicarás toda la ingeniería de datos que hiciste...</p>
+
+    <!-- still not working -->
+    <script>
+        async function preguntarIA() {
+            const pregunta = document.getElementById('user-input').value;
+            const respuestaElemento = document.getElementById('ai-response');
+            
+            respuestaElemento.innerText = "Pensando...";
+
+            try {
+                const response = await fetch('https://tu-api-en-fastapi.com/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: pregunta })
+                });
+                const data = await response.json();
+                respuestaElemento.innerText = data.response; // Ajusta según tu JSON de FastAPI
+            } catch (error) {
+                respuestaElemento.innerText = "Error al conectar con la IA.";
+            }
+        }
+    </script>
+
 </body>
 </html>
