@@ -17,6 +17,7 @@
         }
         @keyframes spin { to { transform: rotate(360deg); } }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body class="bg-[#0f172a] text-white p-10 font-sans">
@@ -94,8 +95,9 @@
                 const data = await response.json();
                 
                 // Mostramos la respuesta (ajusta 'data.answer' según tu backend)
-                respuestaElemento.innerText = data.answer || data.response || "No se pudo obtener respuesta.";
-                
+                const plainText = data.answer || data.response || "No se pudo obtener respuesta.";
+                respuestaElemento.innerHTML = marked.parse(plainText);
+
             } catch (error) {
                 console.error(error);
                 respuestaElemento.innerText = "Error al conectar con la IA. ¿Está el servidor encendido?";
